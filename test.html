@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Dashboard</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<div class="login-container">
+  <div class="input-group">
+    <img id="icon" src="logo.png" alt="logo"> 
+    <label for="username">Email:</label>
+    <input type="text" id="username" placeholder="Username">
+  </div>
+
+  <div class="input-group">
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Password">
+  </div>
+
+  <div class="forgot-password" onclick="alert('Forgot password link clicked')">Forgot your password?</div>
+
+  <button onclick="validateLogin()">Login</button>
+</div>
+
+<script>
+  function validateLogin() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+
+    // Email validation
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(username)) {
+      alert('Invalid email format');
+      return;
+    }
+
+    // Password validation
+    var passwordRegex = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d@]{8,}$/;
+    if (!passwordRegex.test(password)) {
+      alert('Invalid password format');
+      return;
+    }
+
+    // Perform login logic here (e.g., send data to the server)
+    alert('Login successful');
+  }
+</script>
+
+</body>
+</html>

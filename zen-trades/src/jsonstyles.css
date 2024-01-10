@@ -1,0 +1,65 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .file-upload-section {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .available-fields {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 0px;
+    margin-top: 20px;
+  }
+  .selected-fields {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 10px;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  
+  .fields-section {
+    display: flex;
+  }
+  
+  .available-fields ul,
+  .selected-fields ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .available-fields li{
+    cursor: pointer;
+    padding: 5px;
+    margin: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .selected-fields li {
+    cursor: pointer;
+    padding: 5px;
+    margin: 5px;
+    background-color: #DCDCDC;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .product-list {
+    flex-grow: 1;
+  }
+  
+  .file-upload-label {
+    margin-top: 10px;
+    display: block;
+  }
+  
